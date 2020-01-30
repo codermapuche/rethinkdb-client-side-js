@@ -5,7 +5,7 @@ Rethinkdb tool for use the driver in browsers with node.js
 
 2.1 Example on the browser side
 
-```
+```javascript
 // Overwrite this function only the first time as setup.
 query.run = function(branch, ctx) {
   console.log(branch, ctx);
@@ -18,7 +18,7 @@ query.query.table('test').filter({a:1}).run();
 
 2.2 Example on the server side
 
-```
+```javascript
 // Parse and translate the driver here
 function(branch, ctx) {
 				branch = q.decode(branch); // Decode branch codes to methods.
